@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<PMML version="4.2" xmlns="http://www.dmg.org/PMML-4_2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.dmg.org/PMML-4_2 http://www.dmg.org/v4-2/pmml-4-2.xsd">
+ <Header copyright="Copyright (c) 2015 vkkumar" description="Linear Regression Model">
+  <Extension name="user" value="vkkumar" extender="Rattle/PMML"/>
+  <Application name="Rattle/PMML" version="1.4"/>
+  <Timestamp>2015-08-18 21:25:01</Timestamp>
+ </Header>
+ <DataDictionary numberOfFields="23">
+  <DataField name="Worldwide" optype="continuous" dataType="double"/>
+  <DataField name="Year" optype="continuous" dataType="double"/>
+  <DataField name="Rated" optype="categorical" dataType="string">
+   <Value value="Approved"/>
+   <Value value="G"/>
+   <Value value="N/A"/>
+   <Value value="PG"/>
+   <Value value="PG-13"/>
+   <Value value="R"/>
+  </DataField>
+  <DataField name="Runtime" optype="continuous" dataType="double"/>
+  <DataField name="Action" optype="continuous" dataType="double"/>
+  <DataField name="Adventure" optype="continuous" dataType="double"/>
+  <DataField name="Crime" optype="continuous" dataType="double"/>
+  <DataField name="Drama" optype="continuous" dataType="double"/>
+  <DataField name="Thriller" optype="continuous" dataType="double"/>
+  <DataField name="Fantasy" optype="continuous" dataType="double"/>
+  <DataField name="Horror" optype="continuous" dataType="double"/>
+  <DataField name="Sci.Fi" optype="continuous" dataType="double"/>
+  <DataField name="Comedy" optype="continuous" dataType="double"/>
+  <DataField name="Family" optype="continuous" dataType="double"/>
+  <DataField name="Mystery" optype="continuous" dataType="double"/>
+  <DataField name="Romance" optype="continuous" dataType="double"/>
+  <DataField name="Animation" optype="continuous" dataType="double"/>
+  <DataField name="Music" optype="continuous" dataType="double"/>
+  <DataField name="History" optype="continuous" dataType="double"/>
+  <DataField name="Documentary" optype="continuous" dataType="double"/>
+  <DataField name="Wins" optype="continuous" dataType="double"/>
+  <DataField name="Nominations" optype="continuous" dataType="double"/>
+  <DataField name="Production.Budget" optype="continuous" dataType="double"/>
+ </DataDictionary>
+ <RegressionModel modelName="Linear_Regression_Model" functionName="regression" algorithmName="least squares">
+  <MiningSchema>
+   <MiningField name="Worldwide" usageType="predicted"/>
+   <MiningField name="Year" usageType="active"/>
+   <MiningField name="Rated" usageType="active"/>
+   <MiningField name="Runtime" usageType="active"/>
+   <MiningField name="Action" usageType="active"/>
+   <MiningField name="Adventure" usageType="active"/>
+   <MiningField name="Crime" usageType="active"/>
+   <MiningField name="Drama" usageType="active"/>
+   <MiningField name="Thriller" usageType="active"/>
+   <MiningField name="Fantasy" usageType="active"/>
+   <MiningField name="Horror" usageType="active"/>
+   <MiningField name="Sci.Fi" usageType="active"/>
+   <MiningField name="Comedy" usageType="active"/>
+   <MiningField name="Family" usageType="active"/>
+   <MiningField name="Mystery" usageType="active"/>
+   <MiningField name="Romance" usageType="active"/>
+   <MiningField name="Animation" usageType="active"/>
+   <MiningField name="Music" usageType="active"/>
+   <MiningField name="History" usageType="active"/>
+   <MiningField name="Documentary" usageType="active"/>
+   <MiningField name="Wins" usageType="active"/>
+   <MiningField name="Nominations" usageType="active"/>
+   <MiningField name="Production.Budget" usageType="active"/>
+  </MiningSchema>
+  <Output>
+   <OutputField name="Predicted_Worldwide" feature="predictedValue"/>
+  </Output>
+  <RegressionTable intercept="43.6847076188572">
+   <NumericPredictor name="Year" exponent="1" coefficient="-0.0143351624102745"/>
+   <NumericPredictor name="Runtime" exponent="1" coefficient="0.00847420751277138"/>
+   <NumericPredictor name="Action" exponent="1" coefficient="-0.134039110677487"/>
+   <NumericPredictor name="Adventure" exponent="1" coefficient="-0.0356712977049218"/>
+   <NumericPredictor name="Crime" exponent="1" coefficient="-0.279671634961908"/>
+   <NumericPredictor name="Drama" exponent="1" coefficient="-0.030362682383774"/>
+   <NumericPredictor name="Thriller" exponent="1" coefficient="-0.104729191073504"/>
+   <NumericPredictor name="Fantasy" exponent="1" coefficient="0.211776552029585"/>
+   <NumericPredictor name="Horror" exponent="1" coefficient="-0.33082608067004"/>
+   <NumericPredictor name="Sci.Fi" exponent="1" coefficient="0.0658653402916266"/>
+   <NumericPredictor name="Comedy" exponent="1" coefficient="-0.212590322137008"/>
+   <NumericPredictor name="Family" exponent="1" coefficient="-0.254862128222563"/>
+   <NumericPredictor name="Mystery" exponent="1" coefficient="0.0309106109130905"/>
+   <NumericPredictor name="Romance" exponent="1" coefficient="-0.0753542981335581"/>
+   <NumericPredictor name="Animation" exponent="1" coefficient="0.640768334015628"/>
+   <NumericPredictor name="Music" exponent="1" coefficient="-0.438658613104448"/>
+   <NumericPredictor name="History" exponent="1" coefficient="-1.40341794349252"/>
+   <NumericPredictor name="Documentary" exponent="1" coefficient="-0.219971335280121"/>
+   <NumericPredictor name="Wins" exponent="1" coefficient="0.00513499032275587"/>
+   <NumericPredictor name="Nominations" exponent="1" coefficient="0.0099673361298566"/>
+   <NumericPredictor name="Production.Budget" exponent="1" coefficient="0.117605858080323"/>
+   <CategoricalPredictor name="Rated" value="Approved" coefficient="0"/>
+   <CategoricalPredictor name="Rated" value="G" coefficient="1.22291156358189"/>
+   <CategoricalPredictor name="Rated" value="N/A" coefficient="1.95831250553561"/>
+   <CategoricalPredictor name="Rated" value="PG" coefficient="1.6959720519852"/>
+   <CategoricalPredictor name="Rated" value="PG-13" coefficient="1.70270873608746"/>
+   <CategoricalPredictor name="Rated" value="R" coefficient="1.34632117089416"/>
+  </RegressionTable>
+ </RegressionModel>
+</PMML>
